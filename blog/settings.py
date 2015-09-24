@@ -127,3 +127,19 @@ COMPRESS_CSS_FILTERS = [
 
 HTML_MINIFY = True
 KEEP_COMMENTS_ON_MINIFYING = True
+
+AWS_ACCESS_KEY_ID = 'your-access-key'
+AWS_SECRET_ACCESS_KEY = 'your-secret-key'
+
+AWS_S3_CUSTOM_DOMAIN = 'XXXXXXXX.cloudfront.net'
+AWS_S3_SECURE_URLS = True
+
+AWS_STORAGE_BUCKET_NAME = 'test-django-compressor'
+COMPRESS_STORAGE = 'posts.custom_storages.CachedS3BotoStorage'
+STATICFILES_STORAGE = 'posts.custom_storages.StaticToS3Storage'
+
+AWS_IS_GZIPPED = True
+
+STATIC_URL = 'https://XXXXXXX.cloudfront.net/'
+
+COMPRESS_URL = STATIC_URL
